@@ -19,12 +19,11 @@ stream <span class="token operator">=</span> Stream<span class="token punctuatio
 <pre class=" language-java"><code class="prism  language-java">Stream<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> stream <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h3 id="멀티쓰레딩-streams">2.2. 멀티쓰레딩 Streams</h3>
-<p>tream API는 또한 스트림 요소에서 병렬 모드로 작업을 실행 하는 parallelStream () 메서드를 제공하여 멀티 스레딩을 단순화 합니다.<br>
+<p>stream API는 또한 스트림 요소에서 병렬 모드로 작업을 실행 하는 parallelStream() 메서드를 제공하여 멀티 스레딩을 단순화 합니다.<br>
 아래 코드 는 스트림의 모든 요소에 대해 doWork () 메소드 를 병렬 로 실행할 수 있도록 합니다</p>
-<pre><code class="java">
-list.parallelStream().forEach(element -&gt; doWork(element));
+<pre class=" language-java"><code class="prism  language-java">list<span class="token punctuation">.</span><span class="token function">parallelStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>element <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token function">doWork</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>h2. 3. Stream 사용법</p>
+<h2 id="stream-사용법">3. Stream 사용법</h2>
 <p>스트림에서  제공하는 함수는 크게 중간 작업 (return Stream, self-return )과 연산작업 (특정 타입으로 return ) 으로 나뉩니다.</p>
 <pre class=" language-java"><code class="prism  language-java"><span class="token keyword">long</span> count <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">distinct</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -90,7 +89,7 @@ Integer reduced <span class="token operator">=</span> integers<span class="token
   <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>element <span class="token operator">-</span><span class="token operator">&gt;</span> element<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span>Collectors<span class="token punctuation">.</span><span class="token function">toList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>위 코드는 collect () 작업을 사용하여 Stream 을 List으로 변환합니다.</p>
-<p>h2. 4. 결론</p>
+<h2 id="결론">4. 결론</h2>
 <p>여기에서는 Java 스트림에 대해 간략히 살펴 보았습니다. JPA 결합하여 사용하면 복잡한 쿼리를 단순하게 하여 코드로 처리할 수 있습니다.</p>
 <blockquote>
 <p>작성자 : <a href="https://github.com/eyebora">eyebora32</a><br>
