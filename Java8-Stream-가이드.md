@@ -5,7 +5,7 @@
 
 <h1 id="java8-stream-가이드">Java8 Stream 가이드</h1>
 <h2 id="개요">1. 개요</h2>
-<p>Java 8의 새로운 기능 Stream에 대해</p>
+<p>Java 8의 새로운 기능 Stream에 대해 설명합니다.</p>
 <h2 id="stream-api">2. Stream API</h2>
 <p>Java 8의 주요 새로운 기능 중 하나는 여러가지 요소(element) 처리를 위한 매우 강력한 스트림 기능인 java.util.stream 입니다 .<br>
 클래스는 Stream  이며, T 타입 기반의 Stream을 다양한 방법으로 생성할 수 있습니다.</p>
